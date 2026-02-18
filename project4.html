@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprint 4: API Testing - Urban Grocers | María Fernanda Pinilla</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .project-detail {padding: 60px 0; background: var(--light);}
+        .project-detail-header {background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 80px 0 60px; text-align: center;}
+        .project-detail-title {font-size: 2.5rem; margin-bottom: 1rem;}
+        .project-detail-subtitle {font-size: 1.2rem; opacity: 0.9;}
+        .back-button {display: inline-block; margin-bottom: 2rem; padding: 10px 20px; background: var(--primary-color); color: white; text-decoration: none; border-radius: 6px; font-weight: 600; transition: var(--transition);}
+        .back-button:hover {background: var(--secondary-color); transform: translateX(-5px);}
+        .project-overview {background: white; padding: 3rem; border-radius: 12px; margin-bottom: 3rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);}
+        .project-overview h2 {color: var(--dark); margin-bottom: 1.5rem;}
+        .project-overview p {color: var(--gray); line-height: 1.8; margin-bottom: 1rem;}
+        .project-gallery {background: white; padding: 3rem; border-radius: 12px; margin-bottom: 3rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);}
+        .gallery-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem;}
+        .gallery-item {position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: var(--transition);}
+        .gallery-item:hover {transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0,0,0,0.15);}
+        .gallery-item img {width: 100%; height: 300px; object-fit: cover; display: block;}
+        .gallery-caption {padding: 1rem; background: var(--dark); color: white; font-size: 0.9rem; text-align: center;}
+        .project-details-section {background: white; padding: 3rem; border-radius: 12px; margin-bottom: 3rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);}
+        .detail-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;}
+        .detail-card {background: var(--light); padding: 2rem; border-radius: 8px; border-left: 4px solid var(--primary-color);}
+        .detail-card h3 {color: var(--dark); margin-bottom: 1rem;}
+        .detail-card ul {list-style: none; padding: 0;}
+        .detail-card li {padding: 0.5rem 0; color: var(--gray); position: relative; padding-left: 1.5rem;}
+        .detail-card li::before {content: '✓'; position: absolute; left: 0; color: var(--success); font-weight: bold;}
+        .code-snippet {background: #1e293b; color: #e2e8f0; padding: 1rem; border-radius: 6px; font-family: 'Courier New', monospace; font-size: 0.9rem; overflow-x: auto; margin: 1rem 0;}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">MFP | QA Engineer</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="project-detail-header">
+        <div class="container">
+            <span class="project-badge" style="display: inline-block; margin-bottom: 1rem;">Sprint 4</span>
+            <h1 class="project-detail-title">API Testing - Urban Grocers</h1>
+            <p class="project-detail-subtitle">Backend validation using Postman for kits and delivery services</p>
+        </div>
+    </section>
+
+    <section class="project-detail">
+        <div class="container">
+            <a href="index.html#projects" class="back-button">← Back to Projects</a>
+
+            <div class="project-overview">
+                <h2>Project Overview</h2>
+                <p>
+                    This project marked my introduction to API testing, focusing on validating backend functionality for 
+                    Urban Grocers platform. The main objectives were to test two critical features: product kit management 
+                    (allowing users to add products to kits with a 30-product limit) and delivery service calculations 
+                    (computing delivery costs based on time, weight, and product count).
+                </p>
+                <p>
+                    Using Postman as the primary testing tool, I designed and executed comprehensive test cases covering 
+                    positive scenarios, negative scenarios, equivalence classes, and boundary values. This systematic approach 
+                    ensured thorough validation of API endpoints, request/response structures, error handling, and business 
+                    rule enforcement.
+                </p>
+                <p>
+                    The project involved analyzing API documentation, understanding backend requirements, designing test cases 
+                    that covered all specified behaviors, executing tests through Postman, and documenting discovered bugs in 
+                    JIRA with complete technical details including HTTP methods, status codes, request payloads, and response bodies.
+                </p>
+            </div>
+
+            <div class="project-details-section">
+                <h2>Technologies & Tools Used</h2>
+                <div class="project-technologies" style="margin-top: 1.5rem;">
+                    <span class="tech-tag">API Testing</span>
+                    <span class="tech-tag">Postman</span>
+                    <span class="tech-tag">REST APIs</span>
+                    <span class="tech-tag">HTTP Methods</span>
+                    <span class="tech-tag">JSON</span>
+                    <span class="tech-tag">Backend Testing</span>
+                    <span class="tech-tag">JIRA</span>
+                    <span class="tech-tag">Requirements Analysis</span>
+                </div>
+            </div>
+
+            <div class="project-details-section">
+                <h2>Key Achievements & Learning Outcomes</h2>
+                <div class="detail-grid">
+                    <div class="detail-card">
+                        <h3>Requirement 1: Kits</h3>
+                        <ul>
+                            <li>Designed 14-20 test cases for kit product management</li>
+                            <li>Tested POST /api/v1/kits/:id/products endpoint</li>
+                            <li>Validated 30-product unique limit enforcement</li>
+                            <li>Tested invalid kit IDs and product IDs (404, 400)</li>
+                            <li>Verified request body structure validation</li>
+                        </ul>
+                    </div>
+                    <div class="detail-card">
+                        <h3>Requirement 2: Delivery</h3>
+                        <ul>
+                            <li>Created 15-25 test cases for delivery calculations</li>
+                            <li>Validated deliveryTime parameter against schedules</li>
+                            <li>Tested productsWeight boundary values</li>
+                            <li>Verified productsCount validation rules</li>
+                            <li>Ensured correct cost calculation responses</li>
+                        </ul>
+                    </div>
+                    <div class="detail-card">
+                        <h3>Test Design</h3>
+                        <ul>
+                            <li>Applied equivalence partitioning to parameters</li>
+                            <li>Identified boundary values for limits</li>
+                            <li>Covered positive and negative scenarios</li>
+                            <li>Tested error handling and status codes</li>
+                            <li>Validated response message accuracy</li>
+                        </ul>
+                    </div>
+                    <div class="detail-card">
+                        <h3>API Bug Reporting</h3>
+                        <ul>
+                            <li>Documented bugs with HTTP method details</li>
+                            <li>Included request/response payloads</li>
+                            <li>Specified expected vs. actual status codes</li>
+                            <li>Noted discrepancies in error messages</li>
+                            <li>Maintained technical accuracy in JIRA</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-gallery">
+                <h2>API Testing Documentation & Results</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="images/Sprint 4 (Casos de prueba).png" alt="Test Cases">
+                        <div class="gallery-caption">API Test Cases Documentation</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Sprint 4 (Jira Informe de errores).png" alt="JIRA Bug Reports">
+                        <div class="gallery-caption">JIRA Bug Reports with API Details</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Sprint 4 (Postman).png" alt="Postman Testing">
+                        <div class="gallery-caption">Postman Collection Execution</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Sprint 4 (Postman agregar productos).png" alt="Add Products">
+                        <div class="gallery-caption">Testing Add Products to Kit</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Sprint 4 (Postman crear kit).png" alt="Create Kit">
+                        <div class="gallery-caption">Create Kit API Request</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Sprint 4 (Postman Requisito 2).png" alt="Requirement 2">
+                        <div class="gallery-caption">Delivery Service Testing (Requirement 2)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-overview">
+                <h2>API Testing Workflow</h2>
+                <p>
+                    <strong>1. Analyze Requirements:</strong> Studied backend requirements document to understand expected API 
+                    behavior, business rules, validation constraints, and error handling specifications. Identified all parameters, 
+                    their types, ranges, and dependencies.
+                </p>
+                <p>
+                    <strong>2. Review API Documentation:</strong> Examined ApiDoc to understand endpoint URLs, HTTP methods, 
+                    required headers, authentication, request body structure, and response formats. Used example requests as 
+                    templates for test case design.
+                </p>
+                <p>
+                    <strong>3. Design Test Cases:</strong> Created test cases covering: positive scenarios (valid inputs, 
+                    successful operations), negative scenarios (invalid inputs, error conditions), boundary values (limits, 
+                    edges of valid ranges), equivalence classes (representative values from each input category), and edge cases 
+                    (empty arrays, missing fields, malformed JSON).
+                </p>
+                <p>
+                    <strong>4. Execute in Postman:</strong> Set up Postman collections for organized test execution. Created 
+                    prerequisite requests (e.g., create kit before adding products). Executed each test case, noting actual 
+                    responses. Compared actual status codes and messages with expected values from requirements.
+                </p>
+                <p>
+                    <strong>5. Document Bugs:</strong> For discrepancies, created JIRA tickets including: endpoint URL, HTTP 
+                    method, request headers and body, expected status code and response, actual status code and response, 
+                    steps to reproduce, and severity assessment.
+                </p>
+            </div>
+
+            <div class="project-overview">
+                <h2>Example Test Scenarios</h2>
+                <p><strong>Kit Product Management:</strong></p>
+                <div class="code-snippet">
+POST /api/v1/kits/1/products
+Body: {"productsList": [{"id": 1, "quantity": 2}]}
+Expected: 200 OK with updated kit
+                </div>
+                <div class="code-snippet">
+POST /api/v1/kits/1/products (with 30+ unique products)
+Expected: 400 Bad Request
+Message: "No más de 30 artículos por conjunto"
+                </div>
+                <p><strong>Delivery Service Calculation:</strong></p>
+                <div class="code-snippet">
+POST /api/v1/calculate-delivery
+Body: {
+  "deliveryTime": 9,
+  "productsCount": 3,
+  "productsWeight": 5
+}
+Expected: 200 OK with delivery cost
+                </div>
+            </div>
+
+            <a href="index.html#projects" class="back-button">← Back to Projects</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 María Fernanda Pinilla Martínez. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

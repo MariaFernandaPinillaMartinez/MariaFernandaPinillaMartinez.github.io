@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprint 3: UI & Functional Testing | María Fernanda Pinilla</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .project-detail {padding: 60px 0; background: var(--light);}
+        .project-detail-header {background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 80px 0 60px; text-align: center;}
+        .project-detail-title {font-size: 2.5rem; margin-bottom: 1rem;}
+        .project-detail-subtitle {font-size: 1.2rem; opacity: 0.9;}
+        .back-button {display: inline-block; margin-bottom: 2rem; padding: 10px 20px; background: var(--primary-color); color: white; text-decoration: none; border-radius: 6px; font-weight: 600; transition: var(--transition);}
+        .back-button:hover {background: var(--secondary-color); transform: translateX(-5px);}
+        .project-overview {background: white; padding: 3rem; border-radius: 12px; margin-bottom: 3rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);}
+        .project-overview h2 {color: var(--dark); margin-bottom: 1.5rem;}
+        .project-overview p {color: var(--gray); line-height: 1.8; margin-bottom: 1rem;}
+        .project-gallery {background: white; padding: 3rem; border-radius: 12px; margin-bottom: 3rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);}
+        .gallery-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem;}
+        .gallery-item {position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: var(--transition);}
+        .gallery-item:hover {transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0,0,0,0.15);}
+        .gallery-item img {width: 100%; height: 300px; object-fit: cover; display: block;}
+        .gallery-caption {padding: 1rem; background: var(--dark); color: white; font-size: 0.9rem; text-align: center;}
+        .project-details-section {background: white; padding: 3rem; border-radius: 12px; margin-bottom: 3rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);}
+        .detail-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;}
+        .detail-card {background: var(--light); padding: 2rem; border-radius: 8px; border-left: 4px solid var(--primary-color);}
+        .detail-card h3 {color: var(--dark); margin-bottom: 1rem;}
+        .detail-card ul {list-style: none; padding: 0;}
+        .detail-card li {padding: 0.5rem 0; color: var(--gray); position: relative; padding-left: 1.5rem;}
+        .detail-card li::before {content: '✓'; position: absolute; left: 0; color: var(--success); font-weight: bold;}
+        .env-badge {display: inline-block; padding: 8px 16px; background: var(--secondary-color); color: white; border-radius: 6px; margin: 0.5rem; font-size: 0.9rem;}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">MFP | QA Engineer</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="project-detail-header">
+        <div class="container">
+            <span class="project-badge" style="display: inline-block; margin-bottom: 1rem;">Sprint 3</span>
+            <h1 class="project-detail-title">Cross-Browser UI & Functional Testing</h1>
+            <p class="project-detail-subtitle">Comprehensive UI validation and functional testing across multiple environments</p>
+        </div>
+    </section>
+
+    <section class="project-detail">
+        <div class="container">
+            <a href="index.html#projects" class="back-button">← Back to Projects</a>
+
+            <div class="project-overview">
+                <h2>Project Overview</h2>
+                <p>
+                    This project involved comprehensive testing of the car sharing functionality in Urban Routes across 
+                    multiple browsers and screen resolutions. The focus was on validating both the user interface design 
+                    and the functional behavior of the booking form, payment methods, and reservation features.
+                </p>
+                <p>
+                    Testing was conducted in two distinct environments: Chrome at 800x600 resolution and Firefox at 
+                    1920x1080 resolution. This cross-browser, multi-resolution approach ensured consistent user experience 
+                    across different devices and viewing conditions. The project emphasized creating comprehensive checklists 
+                    and test cases to systematically validate every aspect of the car sharing feature.
+                </p>
+                <p>
+                    Key deliverables included a UI design checklist validating layout, typography, and visual elements; 
+                    functional checklists for payment method and card addition features; test cases for the "Reserve" button 
+                    and booking functionality; and detailed bug reports in JIRA with screenshots and reproduction steps.
+                </p>
+            </div>
+
+            <div class="project-details-section">
+                <h2>Testing Environments</h2>
+                <div style="text-align: center; margin: 2rem 0;">
+                    <span class="env-badge">Chrome 800x600</span>
+                    <span class="env-badge">Firefox 1920x1080</span>
+                </div>
+                <p style="color: var(--gray); text-align: center;">
+                    UI design testing performed in both environments • Functional logic validated in one environment
+                </p>
+            </div>
+
+            <div class="project-details-section">
+                <h2>Technologies & Tools Used</h2>
+                <div class="project-technologies" style="margin-top: 1.5rem;">
+                    <span class="tech-tag">UI Testing</span>
+                    <span class="tech-tag">Cross-browser Testing</span>
+                    <span class="tech-tag">Chrome DevTools</span>
+                    <span class="tech-tag">Firefox Developer Tools</span>
+                    <span class="tech-tag">JIRA</span>
+                    <span class="tech-tag">Functional Testing</span>
+                    <span class="tech-tag">Test Checklists</span>
+                    <span class="tech-tag">Google Sheets</span>
+                </div>
+            </div>
+
+            <div class="project-details-section">
+                <h2>Key Achievements & Learning Outcomes</h2>
+                <div class="detail-grid">
+                    <div class="detail-card">
+                        <h3>UI Design Validation</h3>
+                        <ul>
+                            <li>Created comprehensive UI design checklist</li>
+                            <li>Validated layout, typography, and visual elements</li>
+                            <li>Checked spelling and element positioning</li>
+                            <li>Tested popup windows and modal behavior</li>
+                            <li>Ensured consistency across screen resolutions</li>
+                        </ul>
+                    </div>
+                    <div class="detail-card">
+                        <h3>Functional Testing</h3>
+                        <ul>
+                            <li>Developed checklists using equivalence partitioning</li>
+                            <li>Applied boundary value analysis</li>
+                            <li>Tested payment method selection and validation</li>
+                            <li>Validated card addition functionality</li>
+                            <li>Covered positive and negative scenarios</li>
+                        </ul>
+                    </div>
+                    <div class="detail-card">
+                        <h3>Test Case Design</h3>
+                        <ul>
+                            <li>Created test cases for "Reserve" button functionality</li>
+                            <li>Designed booking flow validation scenarios</li>
+                            <li>Tested timer and countdown features</li>
+                            <li>Validated trip cancellation workflows</li>
+                            <li>Documented expected vs. actual behavior</li>
+                        </ul>
+                    </div>
+                    <div class="detail-card">
+                        <h3>Bug Reporting</h3>
+                        <ul>
+                            <li>Reported bugs in JIRA with detailed information</li>
+                            <li>Included screenshots and reproduction steps</li>
+                            <li>Classified bugs by severity and priority</li>
+                            <li>Linked bug reports to failed test cases</li>
+                            <li>Maintained organized defect tracking</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-gallery">
+                <h2>Test Documentation & Results</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="images/Sprint 3 Urban Routes (casos de prueba boton reservar).png" alt="Reserve Button Test Cases">
+                        <div class="gallery-caption">Reserve Button Test Cases</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Sprint 3 Urban Routes (casos de prueba función de alquiler).png" alt="Rental Function Test Cases">
+                        <div class="gallery-caption">Car Rental Function Test Cases</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Sprint 3 Urban Routes (Lista de comprobación del diseño).png" alt="Design Checklist">
+                        <div class="gallery-caption">UI Design Validation Checklist</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Sprint 3 Urban Routes (Lista de comprobación método de pago y agregar tarjeta).png" alt="Payment Checklist">
+                        <div class="gallery-caption">Payment Method & Add Card Checklist</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-overview">
+                <h2>Testing Approach & Methodology</h2>
+                <p>
+                    <strong>UI Design Testing:</strong> Created comprehensive checklist covering layout, spacing, typography, 
+                    color schemes, button states, and visual consistency. Tested in both Chrome (800x600) and Firefox (1920x1080) 
+                    to identify resolution-specific issues. Validated navigation flow and modal window behavior.
+                </p>
+                <p>
+                    <strong>Functional Testing with Test Design Techniques:</strong> Applied equivalence partitioning to input 
+                    fields to identify valid and invalid input classes. Used boundary value analysis to test edge cases. 
+                    Created test cases covering both positive scenarios (valid inputs, successful flows) and negative scenarios 
+                    (invalid inputs, error handling).
+                </p>
+                <p>
+                    <strong>Cross-Browser Validation:</strong> Executed same test cases in different browsers to identify 
+                    browser-specific rendering or functional issues. Documented any inconsistencies in behavior or appearance 
+                    across environments. Ensured consistent user experience regardless of browser choice.
+                </p>
+                <p>
+                    <strong>Defect Management:</strong> For each bug discovered, created detailed JIRA ticket with: unique ID, 
+                    descriptive title, step-by-step reproduction, expected vs. actual results, environment details (browser, 
+                    resolution), severity classification, and supporting screenshots. Maintained traceability between failed 
+                    test cases and bug reports.
+                </p>
+            </div>
+
+            <div class="project-overview">
+                <h2>Testing Scope</h2>
+                <p>
+                    <strong>What was tested:</strong> UI design of booking form for selected trip option (e.g., "Luxury"); 
+                    layout, typography, and visual appearance across resolutions; payment method selection and validation; 
+                    add card functionality with input validation; "Reserve" button behavior and state changes; booking flow 
+                    from selection to confirmation; trip cancellation workflow; popup windows and modal interactions.
+                </p>
+                <p>
+                    <strong>Out of scope:</strong> "Add Driver's License" window design and validation; method of payment 
+                    window design (tested functionality only); add card window design (tested functionality only); distance 
+                    and duration calculation accuracy (assumed correct from earlier sprints); timer countdown accuracy.
+                </p>
+            </div>
+
+            <a href="index.html#projects" class="back-button">← Back to Projects</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 María Fernanda Pinilla Martínez. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
