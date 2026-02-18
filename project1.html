@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprint 1: Regression Testing - Urban Routes | María Fernanda Pinilla</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .project-detail {
+            padding: 60px 0;
+            background: var(--light);
+        }
+        .project-detail-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+        .project-detail-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .project-detail-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        .back-button {
+            display: inline-block;
+            margin-bottom: 2rem;
+            padding: 10px 20px;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        .back-button:hover {
+            background: var(--secondary-color);
+            transform: translateX(-5px);
+        }
+        .project-overview {
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .project-overview h2 {
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+        }
+        .project-overview p {
+            color: var(--gray);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .project-gallery {
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: var(--transition);
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+        .gallery-caption {
+            padding: 1rem;
+            background: var(--dark);
+            color: white;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+        .project-details-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .detail-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .detail-card {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+        }
+        .detail-card h3 {
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+        .detail-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .detail-card li {
+            padding: 0.5rem 0;
+            color: var(--gray);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .detail-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">MFP | QA Engineer</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <section class="project-detail-header">
+        <div class="container">
+            <span class="project-badge" style="display: inline-block; margin-bottom: 1rem;">Sprint 1</span>
+            <h1 class="project-detail-title">Regression Testing - Urban Routes</h1>
+            <p class="project-detail-subtitle">Comprehensive manual testing of transportation application</p>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="project-detail">
+        <div class="container">
+            <a href="index.html#projects" class="back-button">← Back to Projects</a>
+
+            <!-- Project Overview -->
+            <div class="project-overview">
+                <h2>Project Overview</h2>
+                <p>
+                    This project involved executing comprehensive regression testing for Urban Routes, a transportation 
+                    application that creates routes and calculates travel duration and pricing for different transport modes. 
+                    The application features a clean interface with "From" and "To" address fields, three travel modes 
+                    (Optimal, Flash, and Personal), and icons for various transport types including personal car, walking, 
+                    taxi, bicycle, scooter, and carpool options.
+                </p>
+                <p>
+                    My primary responsibility was to execute pre-prepared test cases, identify bugs, and document detailed 
+                    error reports with reproduction steps and severity classifications. This was critical to prevent poor 
+                    user experiences that could result in negative reviews and loss of customers to competitors.
+                </p>
+                <p>
+                    The testing process involved validating core functionality across multiple transportation modes, 
+                    verifying map features (relief, satellite, 3D objects), zoom functionality, and ensuring accurate 
+                    route calculations. Each bug found was meticulously documented in JIRA with clear reproduction steps, 
+                    expected vs. actual results, and appropriate severity levels.
+                </p>
+            </div>
+
+            <!-- Technologies & Tools -->
+            <div class="project-details-section">
+                <h2>Technologies & Tools Used</h2>
+                <div class="project-technologies" style="margin-top: 1.5rem;">
+                    <span class="tech-tag">Manual Testing</span>
+                    <span class="tech-tag">Test Case Execution</span>
+                    <span class="tech-tag">Bug Reporting</span>
+                    <span class="tech-tag">JIRA</span>
+                    <span class="tech-tag">Google Sheets</span>
+                    <span class="tech-tag">Regression Testing</span>
+                    <span class="tech-tag">Chrome Browser</span>
+                    <span class="tech-tag">Test Documentation</span>
+                </div>
+            </div>
+
+            <!-- Key Achievements -->
+            <div class="project-details-section">
+                <h2>Key Achievements & Learning Outcomes</h2>
+                <div class="detail-grid">
+                    <div class="detail-card">
+                        <h3>Test Execution</h3>
+                        <ul>
+                            <li>Executed complete regression test suite for Urban Routes application</li>
+                            <li>Validated functionality across different transportation modes</li>
+                            <li>Tested map features including relief, satellite, and 3D object views</li>
+                            <li>Verified zoom functionality and default settings</li>
+                        </ul>
+                    </div>
+                    <div class="detail-card">
+                        <h3>Bug Identification</h3>
+                        <ul>
+                            <li>Identified and documented multiple critical and major bugs</li>
+                            <li>Found issues affecting core user workflows</li>
+                            <li>Discovered UI inconsistencies and functional defects</li>
+                            <li>Prioritized bugs by business impact and severity</li>
+                        </ul>
+                    </div>
+                    <div class="detail-card">
+                        <h3>Documentation</h3>
+                        <ul>
+                            <li>Created detailed bug reports with clear reproduction steps</li>
+                            <li>Applied appropriate severity classifications</li>
+                            <li>Included screenshots and expected vs. actual results</li>
+                            <li>Maintained organized test documentation in Google Sheets</li>
+                        </ul>
+                    </div>
+                    <div class="detail-card">
+                        <h3>Skills Developed</h3>
+                        <ul>
+                            <li>Systematic test case execution methodology</li>
+                            <li>Critical thinking for edge case identification</li>
+                            <li>Clear communication with development team</li>
+                            <li>Understanding of regression testing importance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Gallery -->
+            <div class="project-gallery">
+                <h2>Project Screenshots & Documentation</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="images/Sprint 1 (Aplicacion Urban Routes).png" alt="Urban Routes Application">
+                        <div class="gallery-caption">Urban Routes Application Interface</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Sprint 1 (Casos de prueba Urban Routes).png" alt="Test Cases">
+                        <div class="gallery-caption">Test Cases Documentation</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Sprint 1 (Pruebas Urban Routes).png" alt="Test Execution">
+                        <div class="gallery-caption">Test Execution Results</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Sprint 1 Urban Routes (Botón mapa relieve).png" alt="Relief Map">
+                        <div class="gallery-caption">Relief Map Feature Testing</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Sprint 1 Urban Routes (mapa satelite).png" alt="Satellite Map">
+                        <div class="gallery-caption">Satellite Map View Testing</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Sprint 1 Urban Routes (objetos 3D).png" alt="3D Objects">
+                        <div class="gallery-caption">3D Objects Validation</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Sprint 1 Urban Routes (Visualización de objetos).png" alt="Object Visualization">
+                        <div class="gallery-caption">Object Visualization Testing</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Sprint 1 Urban Routes (Zoom predeterminado).png" alt="Zoom Functionality">
+                        <div class="gallery-caption">Zoom Functionality Validation</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testing Approach -->
+            <div class="project-overview">
+                <h2>Testing Approach & Methodology</h2>
+                <p>
+                    <strong>Test Planning:</strong> Reviewed pre-prepared test cases to understand the scope and objectives 
+                    of regression testing. Identified critical user workflows that needed validation.
+                </p>
+                <p>
+                    <strong>Test Execution:</strong> Systematically executed each test case following documented steps. 
+                    Compared actual results against expected outcomes. Noted any deviations or unexpected behaviors.
+                </p>
+                <p>
+                    <strong>Bug Reporting:</strong> For each failed test case, created a detailed bug report in JIRA including:
+                    unique bug ID, descriptive title, step-by-step reproduction instructions, expected vs. actual results, 
+                    severity classification (Blocker, Critical, Major, Minor, Trivial), and supporting screenshots.
+                </p>
+                <p>
+                    <strong>Status Tracking:</strong> Maintained test case status (Passed, Failed, Skipped) in Google Sheets 
+                    with links to corresponding bug reports for failed cases.
+                </p>
+            </div>
+
+            <a href="index.html#projects" class="back-button">← Back to Projects</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 María Fernanda Pinilla Martínez. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

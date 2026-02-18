@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprint 2: Test Design - Car Sharing | María Fernanda Pinilla</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .project-detail {padding: 60px 0; background: var(--light);}
+        .project-detail-header {background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 80px 0 60px; text-align: center;}
+        .project-detail-title {font-size: 2.5rem; margin-bottom: 1rem;}
+        .project-detail-subtitle {font-size: 1.2rem; opacity: 0.9;}
+        .back-button {display: inline-block; margin-bottom: 2rem; padding: 10px 20px; background: var(--primary-color); color: white; text-decoration: none; border-radius: 6px; font-weight: 600; transition: var(--transition);}
+        .back-button:hover {background: var(--secondary-color); transform: translateX(-5px);}
+        .project-overview {background: white; padding: 3rem; border-radius: 12px; margin-bottom: 3rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);}
+        .project-overview h2 {color: var(--dark); margin-bottom: 1.5rem;}
+        .project-overview p {color: var(--gray); line-height: 1.8; margin-bottom: 1rem;}
+        .project-gallery {background: white; padding: 3rem; border-radius: 12px; margin-bottom: 3rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);}
+        .gallery-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem;}
+        .gallery-item {position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: var(--transition);}
+        .gallery-item:hover {transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0,0,0,0.15);}
+        .gallery-item img {width: 100%; height: 300px; object-fit: cover; display: block;}
+        .gallery-caption {padding: 1rem; background: var(--dark); color: white; font-size: 0.9rem; text-align: center;}
+        .project-details-section {background: white; padding: 3rem; border-radius: 12px; margin-bottom: 3rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);}
+        .detail-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;}
+        .detail-card {background: var(--light); padding: 2rem; border-radius: 8px; border-left: 4px solid var(--primary-color);}
+        .detail-card h3 {color: var(--dark); margin-bottom: 1rem;}
+        .detail-card ul {list-style: none; padding: 0;}
+        .detail-card li {padding: 0.5rem 0; color: var(--gray); position: relative; padding-left: 1.5rem;}
+        .detail-card li::before {content: '✓'; position: absolute; left: 0; color: var(--success); font-weight: bold;}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">MFP | QA Engineer</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="project-detail-header">
+        <div class="container">
+            <span class="project-badge" style="display: inline-block; margin-bottom: 1rem;">Sprint 2</span>
+            <h1 class="project-detail-title">Test Design - Car Sharing Feature</h1>
+            <p class="project-detail-subtitle">Requirements analysis and comprehensive test documentation design</p>
+        </div>
+    </section>
+
+    <section class="project-detail">
+        <div class="container">
+            <a href="index.html#projects" class="back-button">← Back to Projects</a>
+
+            <div class="project-overview">
+                <h2>Project Overview</h2>
+                <p>
+                    This project focused on analyzing requirements and designing comprehensive test documentation for the 
+                    car sharing feature of Urban Routes. The work involved creating mind maps, flowcharts, and detailed 
+                    test cases using advanced test design techniques including equivalence partitioning and boundary value analysis.
+                </p>
+                <p>
+                    The main deliverables included: a detailed mind map visualizing the "Add Driver's License" feature 
+                    requirements and functionality; equivalence classes and boundary values for "Name" and "Surname" input fields; 
+                    a flowchart depicting the speed selection algorithm based on departure time; and comprehensive test cases 
+                    for fare and duration calculations.
+                </p>
+                <p>
+                    This project emphasized the importance of thorough requirement analysis and systematic test design before 
+                    actual test execution. By identifying equivalence classes and boundary values, I ensured comprehensive test 
+                    coverage while minimizing redundant test cases.
+                </p>
+            </div>
+
+            <div class="project-details-section">
+                <h2>Technologies & Tools Used</h2>
+                <div class="project-technologies" style="margin-top: 1.5rem;">
+                    <span class="tech-tag">Test Case Design</span>
+                    <span class="tech-tag">Requirements Analysis</span>
+                    <span class="tech-tag">Mind Mapping</span>
+                    <span class="tech-tag">draw.io</span>
+                    <span class="tech-tag">Flowcharts</span>
+                    <span class="tech-tag">Equivalence Partitioning</span>
+                    <span class="tech-tag">Boundary Value Analysis</span>
+                    <span class="tech-tag">Google Sheets</span>
+                </div>
+            </div>
+
+            <div class="project-details-section">
+                <h2>Key Achievements & Learning Outcomes</h2>
+                <div class="detail-grid">
+                    <div class="detail-card">
+                        <h3>Mind Mapping</h3>
+                        <ul>
+                            <li>Created detailed mind map visualizing driver's license feature</li>
+                            <li>Separated interface and functionality requirements</li>
+                            <li>Identified gray areas and incomplete requirements</li>
+                            <li>Delivered in professional PDF format</li>
+                        </ul>
+                    </div>
+                    <div class="detail-card">
+                        <h3>Test Design Techniques</h3>
+                        <ul>
+                            <li>Applied equivalence partitioning to input fields</li>
+                            <li>Identified boundary values for validation testing</li>
+                            <li>Selected representative test values for each class</li>
+                            <li>Covered both positive and negative scenarios</li>
+                        </ul>
+                    </div>
+                    <div class="detail-card">
+                        <h3>Process Modeling</h3>
+                        <ul>
+                            <li>Designed flowchart for speed selection algorithm</li>
+                            <li>Visualized decision logic based on departure time</li>
+                            <li>Connected algorithm to fare and duration calculations</li>
+                            <li>Created clear, professional diagrams</li>
+                        </ul>
+                    </div>
+                    <div class="detail-card">
+                        <h3>Test Documentation</h3>
+                        <ul>
+                            <li>Developed comprehensive test cases for calculations</li>
+                            <li>Documented test values with clear rationale</li>
+                            <li>Ensured traceability to requirements</li>
+                            <li>Maintained organized test documentation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-gallery">
+                <h2>Project Deliverables & Documentation</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="images/Sprint 2 Urban Routes (clases de equivalencia).png" alt="Equivalence Classes">
+                        <div class="gallery-caption">Equivalence Classes Documentation</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Sprint 2 Urban Routes (Diagrama de flujo).png" alt="Flowchart">
+                        <div class="gallery-caption">Speed Selection Flowchart</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Sprint 2 Urban Routes (Diagrama de flujo detalle).png" alt="Detailed Flowchart">
+                        <div class="gallery-caption">Detailed Algorithm Flowchart</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Sprint 2 Urban Routes (mapa mental detalle).png" alt="Mind Map Detail">
+                        <div class="gallery-caption">Mind Map - Detailed View</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Sprint 2 Urban Routes (mapa mental drawio).png" alt="Mind Map draw.io">
+                        <div class="gallery-caption">Mind Map in draw.io</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Sprint 2 Urban Routes (mapa mental funcionalidad).png" alt="Functionality Mind Map">
+                        <div class="gallery-caption">Functionality Mind Map</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Sprint 2 Urban Routes Casos de prueba (tiempo costo de viaje).png" alt="Test Cases">
+                        <div class="gallery-caption">Time & Cost Calculation Test Cases</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-overview">
+                <h2>Test Design Methodology</h2>
+                <p>
+                    <strong>Requirements Analysis:</strong> Carefully reviewed all requirements for the car sharing feature, 
+                    identifying explicit requirements, implicit assumptions, and gray areas that needed clarification.
+                </p>
+                <p>
+                    <strong>Equivalence Partitioning:</strong> Divided input domains into equivalence classes where all values 
+                    in a class should behave similarly. This reduced the number of test cases needed while maintaining thorough coverage.
+                </p>
+                <p>
+                    <strong>Boundary Value Analysis:</strong> Identified boundary values at the edges of equivalence classes, 
+                    where bugs are most likely to occur. Tested at, just below, and just above boundaries.
+                </p>
+                <p>
+                    <strong>Visual Modeling:</strong> Created mind maps to visualize feature structure and flowcharts to model 
+                    algorithmic logic, making complex requirements easier to understand and test.
+                </p>
+            </div>
+
+            <a href="index.html#projects" class="back-button">← Back to Projects</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 María Fernanda Pinilla Martínez. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
